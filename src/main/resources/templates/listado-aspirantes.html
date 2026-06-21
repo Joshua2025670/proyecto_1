@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Listado | Apirantes</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="/Dashboard/aspirantes" class="brand-link">
+      <strong class="brand-text font-weight-bold">SiReSe</strong>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar-light">
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-header">Inicio</li>
+          <li class="nav-item">
+            <a href="/Dashboard/aspirantes" class="nav-link active">
+              <p>
+                Aspirantes
+                <span class="fas fa-angle-right right"></span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Dashboard/aspirantes" class="nav-link">
+              <i class="nav-icon far fa-image"></i>
+              <p>
+                Constancias
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/Dashboard/carreras" class="nav-link">
+              <i class="nav-icon fas fa-columns"></i>
+              <p>
+                Carreras
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/auth/logout" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>Salir</p>
+            </a>
+          </li>
+
+          <li class="nav-header">EQUIPO DE TRABAJO</li>
+
+          <li class="nav-item" style="padding-left: 15px; padding-bottom: 8px;">
+            <div class="text-white-50" style="font-size: 13px;">
+              <i class="fas fa-user-graduate mr-2"></i>Becerril Cabral Gabriel A.<br>
+              <span style="margin-left: 24px; font-size: 11px; color: #adb5bd;">2025670122</span>
+            </div>
+          </li>
+
+          <li class="nav-item" style="padding-left: 15px; padding-bottom: 8px;">
+            <div class="text-white-50" style="font-size: 13px;">
+              <i class="fas fa-user-graduate mr-2"></i>Jimenez Ramirez Pedro A.<br>
+              <span style="margin-left: 24px; font-size: 11px; color: #adb5bd;">2025670112</span>
+            </div>
+          </li>
+
+          <li class="nav-item" style="padding-left: 15px; padding-bottom: 8px;">
+            <div class="text-white-50" style="font-size: 13px;">
+              <i class="fas fa-user-graduate mr-2"></i>Reyes Rodriguez Joshua A.<br>
+              <span style="margin-left: 24px; font-size: 11px; color: #adb5bd;">2025670140</span>
+            </div>
+          </li>
+
+          <li class="nav-item" style="padding-left: 15px; padding-bottom: 8px;">
+            <div class="text-white-50" style="font-size: 13px;">
+              <i class="fas fa-user-graduate mr-2"></i>Roman Ureña Perla C.<br>
+              <span style="margin-left: 24px; font-size: 11px; color: #adb5bd;">2025670120</span>
+            </div>
+          </li>
+
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Listado de aspirantes</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Listado de Aspirantes </h3>
+                <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#modal-M">Correo Masivo </button>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <div class="modal fade" id="modal-M">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Correo masivo</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label>Asunto</label>
+            <div class="input-group mb-3">
+              <input id="asuntoM" class="form-control" type="text" placeholder="Indique asunto">
+            </div>
+            <label>Mensaje</label>
+            <div class="input-group mb-3">
+              <textarea id="mensajeM" class="form-control" placeholder="Indique mensaje" rows="4" type="text"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-success" onclick="enviarCorreoMasivo()">Enviar</button>
+            <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="modal-S">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <input type="hidden" id="id-S" value="0">
+          <div class="modal-header">
+            <h4 class="modal-title">Correo a <strong id="aspirante-S"></strong></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label>Asunto</label>
+            <div class="input-group mb-3">
+              <input id="asuntoS" class="form-control" type="text" placeholder="Indique asunto">
+            </div>
+            <label>Mensaje</label>
+            <div class="input-group mb-3">
+              <textarea id="mensajeS" class="form-control" placeholder="Indique mensaje" rows="4" type="text"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-warning" onclick="enviarCorreoIndividual()">Enviar</button>
+            <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <div class="modal fade" id="modal-V">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <input type="hidden" id="id-V" value="0">
+          <div class="modal-header">
+            <h4 class="modal-title">Aspirante: <strong id="aspirante-V"></strong> </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label>Nombre</label>
+            <div class="input-group mb-3">
+              <input id="nombre" class="form-control" type="text" placeholder="Nombre" disabled>
+            </div>
+            <label>Telefono</label>
+            <div class="input-group mb-3">
+              <input id="tel" class="form-control" type="text"  disabled>
+            </div>
+            <label>Email</label>
+            <div class="input-group mb-3">
+              <input id="email" class="form-control" type="text"  disabled>
+            </div>
+            <label>Carrera</label>
+            <div class="input-group mb-3">
+              <input id="carrera" class="form-control" type="text"  disabled>
+            </div>
+          </div>
+          <div class="modal-footer clearfix">
+            <button type="button" class="btn btn-light float-right" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" id="modal-I">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <input type="hidden" id="id-I" value="0">
+          <div class="modal-header">
+            <h4 class="modal-title">Constancia de Aspirante: <strong id="personaI"></strong></h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" style="padding: 0;">
+            <iframe id="visorPDF" src="" style="width: 100%; height: 650px; border: none;"></iframe>
+          </div>
+          <div class="modal-footer justify-content-end">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="/plugins/jszip/jszip.min.js"></script>
+<script src="/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/dist/js/demo.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+<script src="/dist/js/propios/crud-aspirante-ajax.js"></script>
+<script>
+  $( document ).ready(function () {
+    //Function Query se manda a llamar
+    //Cuando la pagina se cargo completamente
+    //Se muestra
+    listarAsp();
+  });
+</script>
+</body>
+</html>
